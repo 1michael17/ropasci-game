@@ -24,13 +24,10 @@ for (let i = 4; i >= 0; i--) {
     if( computerValue === playerChoice ) {
         console.log('DRAW');
         i++;
-        console.log(i);
+    }else {
+        console.log('Not DRAW');
     }
-    else console.log('Not DRAW');
-
-    console.log(`Player's Choice === ${playerChoice}, Computer's Choice === ${computerValue}
-        Chances remaining = ${i}
-    `);
+    
     
     
 
