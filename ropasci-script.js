@@ -1,14 +1,18 @@
-const button = document.querySelector('.play');
 
-// Add addEventlistener to call play function
-button.addEventListener('click', play)
+function toFirstUppercase(str){
+    let firstLetter = str.charAt(0).toUpperCase();
+    let remainingLetters = str.slice(1,str.length+1);
+    return String(firstLetter+remainingLetters);
+}
+
+function chooser (arg){
+    let randomArgIndex = Math.floor(Math.random()*3);
+    return arg[randomArgIndex];
+}
 
 function play(){
     // for loop to count to 5
-    const chooser = (arg) =>{
-        let randomArgIndex = Math.floor(Math.random()*3);
-        return arg[randomArgIndex];
-    }
+
     //pScore = Player Score, cScore = Computer Score
     let pScore = 0; let cScore = 0;
 
@@ -24,28 +28,35 @@ function play(){
         
             //Validator for draw
             if( computerValue === playerChoice ) {
-                console.log('DRAW');
+                console.log('DRAW',
+                `${toFirstUppercase(`${playerChoice}`)} same as ${toFirstUppercase(`${computerValue}`)}`);
+
                 i++;
             }else {
-                console.log('Not DRAW');
-
                 // Score
                 if( computerValue === 'rock' && playerChoice === 'paper'|| computerValue === 'paper' && playerChoice === 'scissor' || computerValue === 'scissor' && playerChoice === 'rock'){
                     pScore++;
+                    console.log(`You Win! ${toFirstUppercase(`${playerChoice}`)} beats ${toFirstUppercase(`${computerValue}`)}`);
                 }
                 else{
                     cScore++;
+                    console.log(`You Loose! ${toFirstUppercase(`${computerValue}`)} beats ${toFirstUppercase(`${playerChoice}`)} Chances remaining = ${i}`);
                 }
             }
+
             console.log(`
-            Player's Choice === ${playerChoice} 
-            Computer's Choice === ${computerValue}
             Chances remaining = ${i}
             Score:: Player = ${pScore}, Computer Score = ${cScore};
             `);
+
+        }else{
+            i++;
+            console.log('Not a Valid Input');
         }
+        // Message for Win or Loose
     }
-    // Message for Win or Loose
-    if (pScore === 5) {console.log(`Hurray, You Won!!!`);}
-        else {console.log(`Ouch, the computer won`);}
+    if (pScore > cScore) console.log(`Hurray, You Won!!!`);
+        else console.log(`Ouch, the computer won`);
 }
+
+play();
