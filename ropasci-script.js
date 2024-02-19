@@ -37,18 +37,15 @@ function play(){
                     cScore++;
                 }
             }
-
             console.log(`
             Player's Choice === ${playerChoice} 
             Computer's Choice === ${computerValue}
             Chances remaining = ${i}
             Score:: Player = ${pScore}, Computer Score = ${cScore};
             `);
-
-            // Message for Win or Loose
-            if (pScore === 5) console.log(`Hurray, You Won!!!`);
-                else console.log(`Ouch, the computer won`);
         }
     }
+    // Message for Win or Loose
+    if (pScore === 5) {console.log(`Hurray, You Won!!!`);}
+        else {console.log(`Ouch, the computer won`);}
 }
-
