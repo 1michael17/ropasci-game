@@ -48,6 +48,8 @@ function play(){
             // Validator to 3 as max score
             if (pScore === 3 || cScore === 3) {
                 i = 0;
+                if (pScore === 3) console.log(`Hurray, You Won!!!`);
+                else console.log(`Ouch, the computer won`);
             }
         }
     }
