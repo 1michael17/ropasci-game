@@ -1,16 +1,16 @@
+const button = document.querySelector('.play');
 
 // Add addEventlistener to call play function
-const button = document.querySelector('.play');
 button.addEventListener('click', play)
+
 function play(){
-
-        // for loop to count to 5
-
-        const chooser = (arg) =>{
-            let randomArgIndex = Math.floor(Math.random()*3);
-            return arg[randomArgIndex];
-        }
-        let pScore = 0; let cScore = 0;
+    // for loop to count to 5
+    const chooser = (arg) =>{
+        let randomArgIndex = Math.floor(Math.random()*3);
+        return arg[randomArgIndex];
+    }
+    //pScore = Player Score, cScore = Computer Score
+    let pScore = 0; let cScore = 0;
 
     for (let i = 4; i >= 0; i--) {
         // computer and player choices
@@ -45,12 +45,9 @@ function play(){
             Score:: Player = ${pScore}, Computer Score = ${cScore};
             `);
 
-            // Validator to 3 as max score
-            if (pScore === 3 || cScore === 3) {
-                i = 0;
-                if (pScore === 3) console.log(`Hurray, You Won!!!`);
+            // Message for Win or Loose
+            if (pScore === 5) console.log(`Hurray, You Won!!!`);
                 else console.log(`Ouch, the computer won`);
-            }
         }
     }
 }
