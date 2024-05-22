@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
-
 </head>
 <body>
+    <header>
+        <div class="logo"><img src="./RPC-Img/1548620.jpg" alt="Rock-Paper-Scissor picture"></div>
+        <h1>THE ROCK PAPER SCISSOR GAME</h1>
+    </header>
+    <main>
+        <div class="data">
+            <div class="option">
+                <div class="choose paper"><img src="./RPC-Img/50037699.jpg" alt="Rock"></div>
+                <div class="choose paper"><img src="./RPC-Img/700676.jpg" alt="Paper"></div>
+                <div class="choose paper"><img src="./RPC-Img/11730698.jpg" alt="Scissor"></div>
+            </div>
+            <div class="choosen">
+                <div class="uChose">Rock</div>
+                <div class="cChose">Scissor</div>
+            </div>
+            <div class="scoreBoard">
+                <h2 class="scoreTitle"> The SCORE BOARD</h2>
+                <div class="score"><span class="urName">Your</span> Score<span class="score">0</span></div>
+                <div class="score">Computer Score<span class="score">0</span></div>
+                <h3>Details</h3>
+                <div class="detail">You Loose! ${toFirstUppercase(`${computerValue}`)} beats ${toFirstUppercase(`${playerChoice}`)} Chances remaining = ${i}</div>
+            </div>
+            <div class="bigScreen">WINNER / Remaining</div>
+        </div>
+        <div class="dButtons">
+            <button class="reset">Reset</button>
+            <button class="play">Play</button>
+        </div>
+    </main>
     <script src="ropasci-script.js"></script>
 </body>
 </html>
