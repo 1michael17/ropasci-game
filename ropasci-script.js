@@ -1,7 +1,8 @@
 
 function toFirstUppercase(str){
-    let firstLetter = str.charAt(0).toUpperCase();
-    let remainingLetters = str.slice(1,str.length+1);
+    //for converting first letter to uppercase
+    const firstLetter = str.charAt(0).toUpperCase();
+    const remainingLetters = str.slice(1,str.length+1);
     return String(firstLetter+remainingLetters);
 }
 

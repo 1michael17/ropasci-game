@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 1px auto;
+    border-bottom: solid 1px black;
+}
+header h1{
+    font-size: 2rem;
+    text-align: center;
+}
+header .logo img{
+    border-radius: 100%;
+}
+
+/* *option */
