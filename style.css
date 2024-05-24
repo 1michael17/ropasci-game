@@ -1,16 +1,65 @@
-header{
+body {
+    background: rgb(231, 231, 231);
+    background: #cfcfcf;
+    font-size: 17px;
+    min-width: 870px;
+}
+
+header {
     display: flex;
     justify-content: space-evenly;
-    width: 80%;
-    margin: 1px auto;
-    border-bottom: solid 1px black;
+    width: 90%;
+    margin: 0% auto 1%;
+    padding: 5px;
+    align-items: center;
+    background: linear-gradient(135deg, #0000004d 0%, white 100%);
+    box-shadow: 1px 1px 1px 1px #c5c5c5, 1px 1px 3px 1px #c5c5c5;
 }
-header h1{
-    font-size: 2rem;
-    text-align: center;
+
+header h1 {
+    font-size: 25px;
 }
-header .logo img{
+
+header .logo img {
     border-radius: 100%;
 }
 
-/* *option */
+/* *header end */
+.option {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1% auto;
+    width: 70%;
+    padding: 1%;
+    height: fit-content;
+    align-items: center;
+    background:  #ffffff5b;
+    border-bottom: solid 1px #fffefe77;
+}
+
+.choose {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+    align-items: center;
+    font-size: 150%;
+    font-weight: bolder;
+    padding: 1%;
+    cursor: pointer;
+    box-shadow: -1px -1px 3px 1px black, 1px 1px 3px 1px black;
+    border-radius: 20px;
+}
+/* **RPS Color */
+.rock{
+    background-color: rgb(255, 147, 84);
+}
+.paper{
+    background-color: silver;
+}
+.scissor{
+    background-color: #077fa7;
+}
+
+/* *.option end */
+
