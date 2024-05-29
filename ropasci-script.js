@@ -155,5 +155,3 @@ function play() {
         endOption();
     }
 }
-
-// play();
