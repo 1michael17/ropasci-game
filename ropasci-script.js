@@ -27,6 +27,24 @@ choose.forEach(e=>{
 
 //-- END OF Default Values
 
+
+toStart.addEventListener('click', toStartFn);
+toReset.addEventListener('click', ()=>{
+    resetBtn();
+    toReset.textContent = 'RESET';
+    h2Det.textContent = 'How to Play';
+});
+option.addEventListener('click', (e) => {
+    playerClick = e.target.value;
+    play();
+    toReset.removeAttribute('disabled');
+    hw2Play.style.display = 'none';
+    h2Det.textContent = 'Game Detail';
+    // detailUL.textContent = '';
+});
+
+// --END OF addEventListeners
+
 function toStartFn(){
     resetBtn();
     
@@ -112,7 +130,30 @@ function play() {
     } else {
         console.log('Not a Valid Input');
     }
-
+//--Win or Loose effect / Message for Win or Loose
+    const endOption = ()=>{
+        toReset.textContent = "PLAY AGAIN";
+        dResult.style.display = 'block';
+        h2Det.textContent = 'Game Detail Log';
+        choose.forEach(e=>{
+            return e.setAttribute('disabled','disabled');
+        });
+    }
+    if (pScore === 5) {
+        dResult.textContent = "YOU WIN!!!";
+        dResult.classList.add('win');
+        dResult.classList.remove('loose');
+        dBody.classList.remove('bLoose');
+        dBody.classList.add('bWin');
+        endOption();
+    } else if (cScore === 5) {
+        dResult.textContent = "YOU LOOSE!!!";
+        dResult.classList.remove('win');
+        dResult.classList.add('loose');
+        dBody.classList.remove('bWin');
+        dBody.classList.add('bLoose');
+        endOption();
+    }
 }
 
 // play();
