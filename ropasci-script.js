@@ -72,53 +72,47 @@ function chooser (arg){
 
 // --END OF Global function
 
-function play(){
-    // for loop to count to 5
+function play() {
+    playerClick;
+    // computer choice
+    const computerChoice = ['rock', 'paper', 'scissors'];
 
-    //pScore = Player Score, cScore = Computer Score
-    let pScore = 0; let cScore = 0;
+    // player choice
+    const playerChoice = playerClick;
+    let report;
 
-    for (let i = 4; i >= 0; i--) {
-        // computer and player choices
-        const computerChoice = ['rock', 'paper', 'scissors'];
-        const playerChoice = String(prompt(`Enter: 'Rock', 'Paper', 'Scissors'`).toLocaleLowerCase());
+    //  validation of player choice
+    if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
+        const computerValue = chooser(computerChoice);
 
-        //  validation of player choice
-        if (playerChoice === 'rock'|| playerChoice ==='paper' || playerChoice ==='scissors'){
-            //function for Computer Random choice
-            const computerValue = chooser(computerChoice);
-        
-            //Validator for draw
-            if( computerValue === playerChoice ) {
-                console.log('DRAW',
-                `${toFirstUppercase(`${playerChoice}`)} same as ${toFirstUppercase(`${computerValue}`)}`);
-
-                i++;
-            }else {
-                // Score
-                if( computerValue === 'rock' && playerChoice === 'paper'|| computerValue === 'paper' && playerChoice === 'scissor' || computerValue === 'scissor' && playerChoice === 'rock'){
-                    pScore++;
-                    console.log(`You Win! ${toFirstUppercase(`${playerChoice}`)} beats ${toFirstUppercase(`${computerValue}`)}  Chances remaining = ${i}`);
-                }
-                else{
-                    cScore++;
-                    console.log(`You Loose! ${toFirstUppercase(`${computerValue}`)} beats ${toFirstUppercase(`${playerChoice}`)} Chances remaining = ${i}`);
-                }
+        //Validator for draw
+        if (computerValue === playerChoice) {
+            report = ` 'DRAW' ${toFirstUppercase(`${playerChoice}`)} same as ${toFirstUppercase(`${computerValue}`)}`; drwScore++;
+        } else {
+        // Validation for score
+            if (computerValue === 'rock' && playerChoice === 'paper' || computerValue === 'paper' && playerChoice === 'scissors' || computerValue === 'scissors' && playerChoice === 'rock') {
+                pScore++;;
+                report = `You Win! ${toFirstUppercase(`${playerChoice}`)} beats ${toFirstUppercase(`${computerValue}`)}  `;
             }
-
-            console.log(`
-            Chances remaining = ${i}
-            Score:: Player = ${pScore}, Computer Score = ${cScore};
-            `);
-
-        }else{
-            i++;
-            console.log('Not a Valid Input');
+            else {
+                cScore++;
+                report = `You Loose! ${toFirstUppercase(`${computerValue}`)} beats ${toFirstUppercase(`${playerChoice}`)}`;
+            }
         }
+        // -- SCOREBOARD UPDATE SECTION
+        urPoint.textContent = pScore
+        UrChoice.textContent = toFirstUppercase(playerChoice);
+        cmPoint.textContent = cScore;
+        cmChoice.textContent = toFirstUppercase(computerValue);
+        drwPoint.textContent = drwScore;
+        const dLi = document.createElement('li');
+        dLi.textContent = report;
+        detailUL.style.display = 'block';
+        detailUL.appendChild(dLi);
+    } else {
+        console.log('Not a Valid Input');
     }
-    // Message for Win or Loose
-    if (pScore > cScore) console.log(`Hurray, You Won!!!`);
-        else console.log(`Ouch, the computer won`);
+
 }
 
 // play();
