@@ -23,7 +23,7 @@ function play(){
         const playerChoice = String(prompt(`Enter: 'Rock', 'Paper', 'Scissors'`).toLocaleLowerCase());
 
         //  validation of player choice
-        if (playerChoice === 'rock'|| playerChoice ==='paper' || playerChoice ==='scissor'){
+        if (playerChoice === 'rock'|| playerChoice ==='paper' || playerChoice ==='scissors'){
             //function for Computer Random choice
             const computerValue = chooser(computerChoice);
         
@@ -37,7 +37,7 @@ function play(){
                 // Score
                 if( computerValue === 'rock' && playerChoice === 'paper'|| computerValue === 'paper' && playerChoice === 'scissor' || computerValue === 'scissor' && playerChoice === 'rock'){
                     pScore++;
-                    console.log(`You Win! ${toFirstUppercase(`${playerChoice}`)} beats ${toFirstUppercase(`${computerValue}`)}`);
+                    console.log(`You Win! ${toFirstUppercase(`${playerChoice}`)} beats ${toFirstUppercase(`${computerValue}`)}  Chances remaining = ${i}`);
                 }
                 else{
                     cScore++;
@@ -54,10 +54,10 @@ function play(){
             i++;
             console.log('Not a Valid Input');
         }
-        // Message for Win or Loose
     }
+    // Message for Win or Loose
     if (pScore > cScore) console.log(`Hurray, You Won!!!`);
         else console.log(`Ouch, the computer won`);
 }
 
-play();
+// play();
