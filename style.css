@@ -4,7 +4,6 @@ body {
     font-size: 17px;
     min-width: 870px;
 }
-
 header {
     display: flex;
     justify-content: space-evenly;
@@ -13,17 +12,14 @@ header {
     padding: 5px;
     align-items: center;
     background: linear-gradient(135deg, #0000004d 0%, white 100%);
-    box-shadow: 1px 1px 1px 1px #c5c5c5, 1px 1px 3px 1px #c5c5c5;
+    box-shadow: 1px 1px 2px 1px #00000056, 1px 1px 3px 1px #2c2c2c48;
 }
-
 header h1 {
     font-size: 25px;
 }
-
 header .logo img {
-    border-radius: 100%;
+    border-radius: 50%;
 }
-
 /* *header end */
 .option {
     display: flex;
@@ -35,8 +31,10 @@ header .logo img {
     align-items: center;
     background:  #ffffff5b;
     border-bottom: solid 1px #fffefe77;
+    box-shadow: 1px 1px 2px 3px #00000056, 1px 1px 3px 2px #2c2c2c48;
+    border-radius: 10px;
 }
-
+/* **RPS Color */
 .choose {
     display: flex;
     flex-direction: column;
@@ -50,7 +48,6 @@ header .logo img {
     box-shadow: -1px -1px 3px 1px black, 1px 1px 3px 1px black;
     border-radius: 20px;
 }
-/* **RPS Color */
 .rock{
     background-color: rgb(255, 147, 84);
 }
@@ -66,41 +63,48 @@ header .logo img {
 .choose:active{
     outline: solid 1px #ffffff;
 }
-
 /* *.option end */
-
 .data1 {
     width: 90%;
     margin: 1% auto;
     display: flex;
     justify-content: space-between;
 }
-
 /* **Start play button */
-.result, .playReset {
+.result{
+    font-weight: bolder;
+    padding: 3%;
+    height: 20%;
+    margin: 0% auto;
+    width: 90%;
+    border-radius: 10px;
+    font-size: 2rem;
+    text-align: center;
+    outline: solid 1px gold;
+}
+.playReset, .prBTN{
     display: block;
     font-weight: bolder;
     height: 30%;
     padding: 3%;
     width: 70%;
-    margin: 3% auto;
+    margin: 2% auto;
     border-radius: 10px;
     background: gray;
     cursor: pointer;
     font-size: 2rem;
     outline: solid 1px gold;
-    border: none;
+    margin-top: 50px;
 }
-
 .bigScreen {
     width: 65%;
     height: 300px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
     margin: 1% auto;
+    box-sizing: border-box;
 }
-
 .score {
     display: flex;
     flex-direction: column;
@@ -109,33 +113,28 @@ header .logo img {
     width: 100%;
     height: 50%;
 }
-
 .dScore{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background: #80808017;
     width: 100%;
     margin: 1% 0%;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 2px;
+    font-size: 1.3rem;
 }
-
 .dScore b{
-    width: 20%;
+    width: 30%;
+    margin: 1%;
+    padding: 1px;
+}
+.dScore .scoreB{
+    width: 10px;
     margin: 1%;
     padding: 1px;
 }
 
-.remains{
-    font-weight: bolder;
-    font-size: 150%;
-    text-align: center;
-}
-
 /* ***.score End */
-.dButtons {
-    /* height: 20%; */
-}
 
 button:hover{
     background: gray;
@@ -143,7 +142,6 @@ button:hover{
     border: none;
 }
 /* ***Button style */
-
 .scoreBoard {
     display: flex;
     flex-direction: column;
@@ -162,7 +160,6 @@ button:hover{
 .scoreBoard li, .scoreBoard b{
     margin-bottom: 5px;
 }
-
 .detail {
     margin-bottom: 0%;
 }
@@ -175,9 +172,8 @@ button:hover{
 }
 
 body .bWin{
-    background: radial-gradient(#ada21f,#0b8000);
+    background: radial-gradient(#ada11f6c,#0b80006c);
 }
 body .bLoose{
-background: radial-gradient(#ada21f,#800000);
+    background: radial-gradient(#ada11f5d,#800000);
 }
-/* **JS Determine Start */
