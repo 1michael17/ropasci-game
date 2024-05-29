@@ -27,6 +27,37 @@ choose.forEach(e=>{
 
 //-- END OF Default Values
 
+function toStartFn(){
+    resetBtn();
+    
+    toStart.style.display = 'none';
+    
+    toReset.style.display = 'block';
+    scoreScreen.style.display = 'flex';
+}
+
+function resetBtn(){
+    choose.forEach(e=>{
+        return e.removeAttribute('disabled');
+    });
+    toReset.setAttribute('disabled','disabled')
+    toStart.style.display = 'none';
+    dResult.style.display = 'none';
+    hw2Play.style.display = 'block';
+    scoreScreen.style.display = 'flex';
+    detailUL.textContent = '';
+    h2Det.textContent = 'How to Play';
+    pScore = 0, cScore = 0, drwScore = 0;
+    urPoint.textContent = 0;
+    cmPoint.textContent = 0;
+    drwPoint.textContent = 0;
+
+    dResult.classList.add('win');
+    dResult.classList.remove('loose');
+    dBody.classList.remove('bLoose');
+    dBody.classList.remove('bWin');
+}
+
 function toFirstUppercase(str){
     //for converting first letter to uppercase
     const firstLetter = str.charAt(0).toUpperCase();
@@ -38,6 +69,8 @@ function chooser (arg){
     let randomArgIndex = Math.floor(Math.random()*3);
     return arg[randomArgIndex];
 }
+
+// --END OF Global function
 
 function play(){
     // for loop to count to 5
