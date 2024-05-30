@@ -1,5 +1,4 @@
 body {
-    background: rgb(231, 231, 231);
     background: #cfcfcf;
     font-size: 17px;
     min-width: 870px;
@@ -169,11 +168,4 @@ button:hover{
 }
 .loose{
     background: linear-gradient(45deg, red,gray);
-}
-
-body .bWin{
-    background: radial-gradient(#ada11f6c,#0b80006c);
-}
-body .bLoose{
-    background: radial-gradient(#ada11f5d,#800000);
 }
