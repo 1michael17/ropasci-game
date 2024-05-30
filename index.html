@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="body">
+        <header>
+            <div class="logo"><img src="dRPS.jpg" alt="Rock-Paper-Scissor picture" width="80" height="80"></div>
+            <h1>THE ROCK PAPER SCISSOR GAME</h1>
+        </header>
+        <main>
+            <div class="option">
+                <button class="choose rock" value="rock">ROCK</button>
+                <button class="choose paper" value="paper">PAPER</button> 
+                <button class="choose scissors" value="scissors">SCISSORS</button> 
+            </div>
+            <div class="data1">
+                <div class="bigScreen">
+                    <div class="result toPlay">YOU WIN!!!</div>
+                    <div class="score">
+                        <div class="dScore">
+                            <b>Your Score &nbsp; :: </b>
+                            <b class="scoreB urPoint">0</b>
+                            <b>Choice &nbsp; :: </b>
+                            <b class="score UrChoice">ROCK</b>
+                        </div>
+                        <div class="dScore">
+                            <b>Computer Score &nbsp; :: </b>
+                            <b class="scoreB cmPoint ">0</b>
+                            <b>Choice &nbsp; :: </b>
+                            <b class="score cmChoice">SCISSORS</b>
+                        </div>
+                        <div class="dScore">
+                            <b>Draw &nbsp; :: </b>
+                            <b class="scoreB drwPoint ">0</b>
+                            <b></b>
+                            <b class="score cmChoice"></b>
+                        </div>    
+                    </div>
+                    <button class="prBTN" id="start">START</button>
+                    <button  class="playReset">RESET</button>
+                </div>
+                <div class="scoreBoard">
+                    <h2 class="scoreH2 a">How to Play</h2>
+                    <ol id="toPlay">
+                        <li>Click on START button</li>
+                        <li>Click on either: Rock / Paper / Scissors </li>
+                        <li>if Computer = 'Rock' and You = 'Paper' or </li>
+                        <li>if Computer = 'Paper' and You = 'Scissors' or</li>
+                        <li>if Computer = 'Scissors' and You = 'Rock'</li>
+                        <li>Draw doesn't count</li>
+                        <li>The <b>FIRST </b>to get 5 points
+                        <b> Wins</b></li>
+                    </ol>
+                    <ol id="detail">  
+                    </ol>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="ropasci-script.js"></script>
 </body>
 </html>
