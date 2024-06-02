@@ -7,7 +7,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     width: 90%;
-    margin: 0% auto 1%;
+    margin: 1% auto;
     padding: 5px;
     align-items: center;
     background: linear-gradient(135deg, #0000004d 0%, white 100%);
@@ -33,7 +33,7 @@ header .logo img {
     box-shadow: 1px 1px 2px 3px #00000056, 1px 1px 3px 2px #2c2c2c48;
     border-radius: 10px;
 }
-/* **RPS Color */
+/* *RPS Color */
 .choose {
     display: flex;
     flex-direction: column;
@@ -69,12 +69,12 @@ header .logo img {
     display: flex;
     justify-content: space-between;
 }
-/* **Start play button */
+/* **Start .bigScreen */
 .result{
     font-weight: bolder;
     padding: 3%;
     height: 20%;
-    margin: 0% auto;
+    margin: 1% auto 0%;
     width: 90%;
     border-radius: 10px;
     font-size: 2rem;
@@ -82,18 +82,17 @@ header .logo img {
     outline: solid 1px gold;
 }
 .playReset, .prBTN{
-    display: block;
     font-weight: bolder;
-    height: 30%;
-    padding: 3%;
+    height: 23%;
+    padding: 2%;
     width: 70%;
-    margin: 2% auto;
+    margin: 1% auto;
     border-radius: 10px;
     background: gray;
     cursor: pointer;
     font-size: 2rem;
-    outline: solid 1px gold;
-    margin-top: 50px;
+    border: solid 1px #ffd90050;
+    margin-top: 4%;
 }
 .bigScreen {
     width: 65%;
@@ -101,7 +100,7 @@ header .logo img {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 1% auto;
+    margin: 0% auto;
     box-sizing: border-box;
 }
 .score {
@@ -109,7 +108,7 @@ header .logo img {
     flex-direction: column;
     justify-content: space-around;
     margin: 1%;
-    width: 100%;
+    width: 98%;
     height: 50%;
 }
 .dScore{
@@ -133,22 +132,20 @@ header .logo img {
     padding: 1px;
 }
 
-/* ***.score End */
-
 button:hover{
     background: gray;
     outline: solid 1px black;
     border: none;
 }
-/* ***Button style */
+/* ***End of .bigScreen */
 .scoreBoard {
     display: flex;
     flex-direction: column;
     box-shadow: -1px -1px 3px 1px #0000006e;
     width: 31%;
-    height: 400px;
+    height: 350px;
     background: #b6b6b648;
-    padding: 1% 1%;
+    padding: 1%;
     overflow-y: auto;
     box-sizing: border-box;
 }
@@ -162,7 +159,21 @@ button:hover{
 .detail {
     margin-bottom: 0%;
 }
-/* **.scoreBoard end */
+/* **End of .scoreBoard */
+footer{
+    padding: 1%;
+    position: fixed;
+    display: block;
+    line-height: 80%;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: #80808060;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* **End of footer */
+/* **JS Update */
 .win{
     background: linear-gradient(45deg,#ffff00a4, #008000af, #ff000096);
 }
